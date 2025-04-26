@@ -31,7 +31,13 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+],
+  {
+    basename: "/p2pdrop", // Add your base path here
+  }
+                                  
+                                  
+                                  );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
