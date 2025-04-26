@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5050,
   },
 
-  base: "/P2P_FileSharing/",
+ 
 
   plugins: [react()],
 });
