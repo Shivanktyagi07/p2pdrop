@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #06b6d4);
+  background-size: 800% 800%;
+  animation: bodyGradient 5s ease infinite; /* Faster */
+  color: white;
+}
+
+@keyframes bodyGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: transparent;
+  font-size: calc(10px + 2vmin);
+  z-index: 2;
+  position: relative;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.bg,
+.bg2,
+.bg3 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.25;
+  animation: slide 2s ease-in-out infinite alternate; /* Faster */
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
+  background-size: 600% 600%;
+}
+
+.bg2 {
+  animation-duration: 4s; /* Faster */
+  animation-direction: alternate-reverse;
+}
+
+.bg3 {
+  animation-duration: 6s; /* Faster */
+  animation-direction: alternate;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(135deg, #9f05ffb3 10%, #fd5e08b3 100%);
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+h3,
+p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
+}
+
+.share {
+  padding: 16px;
+  margin-top: 10px;
+  background: #f44336;
+  width: 70px;
+  height: 45px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  transition: 0.3s ease;
+}
+
+.share:hover {
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.24), 0 17px 50px rgba(0, 0, 0, 0.19);
+  transform: scale(1.05);
+}
+
+.main-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  animation: flickerText 2.5s infinite alternate, pulse 4s ease-in-out infinite;
+  margin-top: 150px;
+}
+
+@keyframes flickerText {
+  0% {
+    text-shadow: 0 0 5px #00ffff;
+  }
+  50% {
+    text-shadow: 0 0 15px #00ffff;
+  }
+  100% {
+    text-shadow: 0 0 8px #00ffff;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
