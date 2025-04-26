@@ -7,7 +7,7 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5050,
   },
-base:'p2pdrop,
+ base: "/p2pdrop/",
  
 
   plugins: [react()],
